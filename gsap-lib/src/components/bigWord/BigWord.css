@@ -5,14 +5,14 @@
   pointer-events: none;
   user-select: none;
   margin-bottom: 8vw;
-  position: fixed;
+  position: relative;
   left: 0;
   right: 0;
   margin-bottom: 8vw;
   text-align: center;
   font-weight: 800; /* font-extrabold */
   line-height: 0.8;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.08em;
   color: rgba(216, 104, 13, 0.1); /* text-black/10 */
   font-size: 22vw;
 

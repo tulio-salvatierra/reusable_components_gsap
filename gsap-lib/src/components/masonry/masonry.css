@@ -27,8 +27,7 @@ html, body {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-
-  position: relative; /* JS also sets this, but it's safe here */
+  position: absolute; /* JS also sets this, but it's safe here */
 }
 
 /* Fallback width – JS will override with inline styles */

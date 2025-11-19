@@ -20,7 +20,7 @@ export function MasonryGrid({
       <div className="masonry-collection">
         <div
           ref={containerRef}
-          className="masonry-list"
+          className={`masonry-list ${className}`}
           data-masonry-list
         >
           {children}
