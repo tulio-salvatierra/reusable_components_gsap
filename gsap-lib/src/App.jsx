@@ -2,6 +2,7 @@
 import { MasonryGrid } from "./components/masonry/masonry";
 import "./App.css";
 import InteractiveDotGrid from "./components/interativeDotGrid/InteractiveDotGrid";
+import { BigWord } from "./components/bigWord/BigWord";
 
 function App() {
   
@@ -74,7 +75,7 @@ function App() {
         <h1>CICERO WEB STUDIO</h1>
       </div>
       <div className="container">
-       
+        <BigWord text="CICERO WEB STUDIO" />
       </div>
       <div>
         <MasonryGrid shuffle={true}>
