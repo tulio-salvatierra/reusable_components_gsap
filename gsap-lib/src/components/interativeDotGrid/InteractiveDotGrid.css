@@ -4,7 +4,8 @@
   color: #efeeec;
   justify-content: center;
   align-items: stretch;
-  min-height: 100vh;
+  min-height: auto;
+  width: 100%;
   padding: 4em;
   display: flex;
   position: relative;
@@ -44,5 +45,5 @@
   transform: translate (-50%, -50%);
 }
 .osmo-icon-svg {
-  width: 10em;
+  width: 5em;
 }

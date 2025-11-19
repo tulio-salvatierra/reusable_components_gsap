@@ -1,12 +1,10 @@
-import { useState } from 'react'
-import { MasonryGrid } from './components/masonry/masonry'
-import './App.css'
-import InteractiveDotGrid from './components/interativeDotGrid/InteractiveDotGrid';
 
-
+import { MasonryGrid } from "./components/masonry/masonry";
+import "./App.css";
+import InteractiveDotGrid from "./components/interativeDotGrid/InteractiveDotGrid";
 
 function App() {
-  const [count, setCount] = useState(0)
+  
   const images = [
     {
       src: "https://cdn.prod.website-files.com/688006f2c368aa3a853bab48/688008cdca559e9bd5ebd7d7_masonry-img-1.avif",
@@ -69,41 +67,34 @@ function App() {
       variant: "",
     },
   ];
-  
 
   return (
     <>
       <div>
         <h1>CICERO WEB STUDIO</h1>
       </div>
-
-      <InteractiveDotGrid />
-      <MasonryGrid shuffle={true}>
-        {images.map((src, i) => (
-          <div className="masonry-item" key={i}>
-            <div className="masonry-item__visual">
-              <img
-                src={src}
-                alt={`Masonry ${i + 1}`}
-                className="masonry-item__visual-img"
-              />
-            </div>
-          </div>
-        ))}
-      </MasonryGrid>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="container">
+       
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div>
+        <MasonryGrid shuffle={true}>
+          {images.map((src, i) => (
+            <div className="masonry-item" key={i}>
+              <div className="masonry-item__visual">
+                <img
+                  src={src.src}
+                  alt={`Masonry ${i + 1}`}
+                  className="masonry-item__visual-img"
+                />
+              </div>
+            </div>
+          ))}
+        </MasonryGrid>
+      </div>
+       <InteractiveDotGrid />
+      
     </>
-  )
+  );
 }
 
-export default App
+export default App;

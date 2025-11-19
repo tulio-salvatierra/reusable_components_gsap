@@ -1,61 +1,47 @@
 #root {
-  max-width: 100%;
   margin: 0 auto;
-  min-height: 100vh;
-  padding: 1rem;
-  text-align: center;
+  width: 100%;
+  height: auto;
 }
 
-
-// --- EXTERNAL SCRIPTS ---
-// No external scripts are required for this CSS-only component.
-
-// --- HTML ---
-// HTML structure is not required for this resource.
-
-// --- CSS ---
-/* Cursor "default" */
-body,
-body:is([data-cursor="default"], [data-cursor="default"] *),
-body * {
-  cursor: url("https://cdn.prod.website-files.com/684fd3662bf373c304f927ef/684fd3faf1928131d9db6e0d_936bd88147511144743f09f4477f4c1a_cursor-default.svg") 2 0,
-    auto;
+body {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
 
-/* Cursor "text" */
-body:is([data-cursor="text"], [data-cursor="text"] *),
-body:is(p, h1, h2, h3, h4, h5, h6, input[type="text"], textarea) {
-  cursor: url("https://cdn.prod.website-files.com/684fd3662bf373c304f927ef/684fd3fa187280f5367673ab_a5441e26d72d35676d51172bd3a38038_cursor-text.svg") 9 19,
-    text;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-/* Cursor "pointer" (Hover) */
-body:is([data-cursor="pointer"], [data-cursor="pointer"] *),
-body:is(
-    a,
-    a *,
-    a p,
-    button,
-    button *,
-    select,
-    input[type="submit"],
-    input[type="button"],
-    input[type="radio"],
-    input[type="checkbox"]
-  ) {
-  cursor: url("https://cdn.prod.website-files.com/684fd3662bf373c304f927ef/684fd3fa2e5a792140becaff_2b1e000c885a11daa778a26530dd8999_cursor-pointer.svg") 12 0,
-    pointer;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* Cursor "grab" */
-body:is([data-cursor="grab"], [data-cursor="grab"] *) {
-  cursor: url("https://cdn.prod.website-files.com/684fd3662bf373c304f927ef/684fd3fadd3e56db88677898_e4c3ca1346ce8749e9ebc404b2c38a67_cursor-grab.svg") 12 4,
-    grab;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-/* Cursor "grabbing" */
-body:is([data-cursor="grabbing"], [data-cursor="grabbing"] *) {
-  cursor: url("https://cdn.prod.website-files.com/684fd3662bf373c304f927ef/684fd3faadaedb1825819d22_93f8d20982e98baea5d26f613bf60af6_cursor-grabbing.svg") 12 0,
-    grabbing;
+.card {
+  padding: 2em;
 }
 
+.read-the-docs {
+  color: #888;
+}
