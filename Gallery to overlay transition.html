@@ -1,0 +1,370 @@
+// --- EXTERNAL SCRIPTS ---
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+
+// --- HTML ---
+<section class="section-resource is--dark">
+  <div class="page">
+    <div class="main">
+      <div class="main-col">
+        <div class="main-img__list">
+          <div class="main-img__item" style="opacity: 1; visibility: inherit;">
+            <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7f44_tobias-reich-AwqQch2wAmM-unsplash.avif" loading="lazy" class="image" data-flip-id="auto-2" style="">
+          </div>
+          <div class="main-img__item" style="opacity: 0; visibility: hidden;">
+            <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7f82_massimiliano-morosinotto-oJmVzkVStoo-unsplash.avif" loading="lazy" class="image">
+          </div>
+          <div class="main-img__item" style="opacity: 0; visibility: hidden;">
+            <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7f6d_karsten-winegeart-9CTqIV6kPQ0-unsplash.avif" loading="lazy" class="image">
+          </div>
+          <div class="main-img__item" style="opacity: 0; visibility: hidden;">
+            <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7f4e_lucas-marcomini-cVBz9q1T_9M-unsplash.avif" loading="lazy" class="image">
+          </div>
+          <div class="main-img__item" style="opacity: 0; visibility: hidden;">
+            <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7f62_sergey-pesterev-i-P1lmY_e1w-unsplash.avif" loading="lazy" class="image">
+          </div>
+        </div>
+      </div>
+      <div class="main-col">
+        <ul class="main-title__list">
+          <li class="main-title__item">
+            <button class="button">
+              <h2 class="main-title" data-flip-id="auto-1" style="visibility: inherit; opacity: 1; transform: translate(0px, 0px);">Eclipse Lodge</h2>
+            </button>
+          </li>
+          <li class="main-title__item">
+            <button class="button">
+              <h2 class="main-title" style="translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">Serenity Peaks</h2>
+            </button>
+          </li>
+          <li class="main-title__item">
+            <button class="button">
+              <h2 class="main-title" style="translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">The Celestial Inn</h2>
+            </button>
+          </li>
+          <li class="main-title__item">
+            <button class="button">
+              <h2 class="main-title" style="translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">Aurora Heights Hotel</h2>
+            </button>
+          </li>
+          <li class="main-title__item">
+            <button class="button">
+              <h2 class="main-title" style="translate: none; rotate: none; scale: none; opacity: 1; visibility: inherit; transform: translate(0px, 0px);">Golden Sands Retreat</h2>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="overlay-wrap">
+      <div class="overlay-item" style="opacity: 110; visibility: inherit; display: none;">
+        <div class="overlay-hero">
+          <div data-overlay="text-target" class="overlay-title__wrap"></div>
+          <div data-overlay="img-target" class="overlay-img__wrap"></div>
+        </div>
+        <div class="overlay-row" style="opacity: 0; visibility: hidden;">
+          <div class="overlay-col col-left">
+            <div class="overlay-col__img">
+              <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7f58_tobias-reich-VltYe88rkt8-unsplash.avif" loading="lazy" class="image">
+            </div>
+          </div>
+          <div class="overlay-col col-right">
+            <div class="overlay-col__img">
+              <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7f77_tobias-reich-wr6m4OOZZtw-unsplash.avif" loading="lazy" class="image">
+            </div>
+            <p class="paragraph">A sophisticated getaway with modern architecture and unforgettable sunsets, where every moment feels timeless.</p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay-item">
+        <div class="overlay-hero">
+          <div data-overlay="text-target" class="overlay-title__wrap"></div>
+          <div data-overlay="img-target" class="overlay-img__wrap"></div>
+        </div>
+        <div class="overlay-row">
+          <div class="overlay-col col-left">
+            <div class="overlay-col__img">
+              <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7f89_eberhard-grossgasteiger-UclnVUmf5aQ-unsplash.jpg" loading="lazy" class="image">
+            </div>
+          </div>
+          <div class="overlay-col col-right">
+            <div class="overlay-col__img">
+              <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7f90_filippo-fFh53mf_6iE-unsplash.jpg" loading="lazy" class="image">
+            </div>
+            <p class="paragraph">Tucked among towering peaks and serene valleys, this haven offers a peaceful escape from the noise of the world.</p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay-item">
+        <div class="overlay-hero">
+          <div data-overlay="text-target" class="overlay-title__wrap"></div>
+          <div data-overlay="img-target" class="overlay-img__wrap"></div>
+        </div>
+        <div class="overlay-row">
+          <div class="overlay-col col-left">
+            <div class="overlay-col__img">
+              <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7fb8_karsten-winegeart-VTzcKDm7Sug-unsplash.jpg" loading="lazy" class="image">
+            </div>
+          </div>
+          <div class="overlay-col col-right">
+            <div class="overlay-col__img">
+              <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7fcc_karsten-winegeart-EqMRa0cgEiI-unsplash.jpg" loading="lazy" class="image">
+            </div>
+            <p class="paragraph">A sanctuary above the clouds, offering celestial views and unmatched tranquility for dreamers and stargazers alike.</p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay-item">
+        <div class="overlay-hero">
+          <div data-overlay="text-target" class="overlay-title__wrap"></div>
+          <div data-overlay="img-target" class="overlay-img__wrap"></div>
+        </div>
+        <div class="overlay-row">
+          <div class="overlay-col col-left">
+            <div class="overlay-col__img">
+              <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7fa4_lisha-riabinina-08P8Hzja_Yk-unsplash.jpg" loading="lazy" class="image">
+            </div>
+          </div>
+          <div class="overlay-col col-right">
+            <div class="overlay-col__img">
+              <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7fae_laszlo-bajnoczi-tThY14QmOYE-unsplash.jpg" loading="lazy" class="image">
+            </div>
+            <p class="paragraph">Nestled in the heart of nature, this retreat is the perfect place to watch the northern lights dance across the sky.</p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay-item">
+        <div class="overlay-hero">
+          <div data-overlay="text-target" class="overlay-title__wrap"></div>
+          <div data-overlay="img-target" class="overlay-img__wrap"></div>
+        </div>
+        <div class="overlay-row">
+          <div class="overlay-col col-left">
+            <div class="overlay-col__img">
+              <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7f9a_maria-orlova-b37mDyPzdJM-unsplash.jpg" loading="lazy" class="image">
+            </div>
+          </div>
+          <div class="overlay-col col-right">
+            <div class="overlay-col__img">
+              <img alt="" src="https://cdn.prod.website-files.com/67698689512e0fc28ac45d04/67698a0416860b36f6dd7fc2_jannes-jacobs-pT15RyXDJ4Q-unsplash.jpg" loading="lazy" class="image">
+            </div>
+            <p class="paragraph">Feel the warmth of the sun and the embrace of golden shores, where luxury meets the serenity of the sea.</p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay-nav" style="display: none;">
+        <button data-overlay="close" class="button text">
+          <p data-overlay="nav-item" class="text-reg" style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Back to list</p>
+        </button>
+        <p data-overlay="nav-item" class="text-reg" style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Scroll to explore</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+// --- CSS ---
+.section-resource { justify-content : center; align-items : center; min-height : 100vh ; display : flex; }
+.section-resource .is--dark { color : #fff ; background-color : #000 ; }
+a { color : inherit; text-decoration : underline; }
+p { margin : 0px ; }
+.page { z-index : 0 ; inset: 2em ; position : absolute; }
+.main { opacity : 1 ; width : 100% ; height : 100% ; display : flex; }
+.main-col { width : 50% ; height : 100% ; }
+.main-img__list { width : 16em ; height : 22em ; position : relative; }
+.main-img__item { z-index : 1 ; width : 100% ; height : 100% ; position : absolute; }
+.image { object-fit : cover; border-radius : . 5em ; width : 100% ; height : 100% ; }
+.main-title__list { flex-flow : column; justify-content : flex-end; align-items : flex-start; height : 100% ; padding : 0 ; list-style : none; display : flex; position : relative; }
+.main-title__item { justify-content : flex-start; align-items : center; height : 1.25em ; font-size : 4.5em ; transition : opacity . 2s ; display : flex; position : relative; }
+.main-title { letter-spacing : -. 03em ; white-space : nowrap; margin-top : 0 ; margin-bottom : 0 ; font-size : 4.5em ; font-weight : 500 ; line-height : 1 ; color : #fff ; }
+.main-title__list :hover :has ( .main-title__item :hover ) .main-title__item :not ( :hover ){ opacity : 0.45 ; }
+.main-title ::after { position : absolute; content : '' ; top : 50% ; right : -. 3em ; width : 0.75em ; height : 0.15em ; border-radius : 100em ; background : currentColor; opacity : 0 ; transition : all 0.525s cubic-bezier ( 0.65 , 0.05 , 0 , 1 ); transform : translate ( 100% , 0% ) scale ( 0 ); }
+.main-title__item :hover .main-title ::after { transform : translate ( 0% , 0% ) scale ( 1 ); opacity : 1 ; width : 0.15em ; }
+.button { background-color : transparent; border : none; padding : 0 ; }
+.button .text { transition : opacity . 2s ; }
+.button .text :hover { opacity : . 7 ; }
+.overlay-wrap { z-index : 2 ; pointer-events : none; padding-top : 6em ; position : absolute; inset: 0% ; }
+.overlay-item { z-index : 1 ; pointer-events : auto; padding-bottom : 16em ; display : none; position : relative; }
+.overlay-item .active { display : block; }
+.overlay-hero { grid- column-gap : 5em ; grid-row-gap: 5em ; flex-flow : column; justify-content : flex-start; align-items : center; margin-bottom : 7.5em ; display : flex; }
+.overlay-title__wrap { text-align : center; flex-flow : column; justify-content : center; align-items : center; width : 100% ; height : 9em ; display : flex; position : relative; }
+.overlay-title__wrap .main-title { position : absolute; font-size : 9em ; }
+.overlay-img__wrap { width : 42em ; height : 64em ; }
+.overlay-row { justify-content : space-between; align-items : center; padding-left : 6em ; display : flex; }
+.overlay-col { grid- column-gap : 2em ; grid-row-gap: 2em ; flex-flow : column; display : flex; }
+.overlay-col .col-left { max-width : 26em ; transform : translate ( 0 , 50% ); }
+.overlay-col .col-right { max-width : 35em ; }
+.overlay-col__img { height : 26em ; }
+.paragraph { text-indent : 4em ; margin-bottom : 0 ; font-size : 1.25em ; line-height : 1.25 ; }
+.overlay-nav { z-index : 2 ; pointer-events : auto; justify-content : space-between; align-items : flex-end; display : none; position : absolute; inset: auto 0% 0% ; overflow : hidden; color : inherit; }
+.text-reg { margin-bottom : 0 ; font-size : 1.125em ; line-height : 1.25 ; }
+.button .text { color : inherit; }
+
+// --- JAVASCRIPT ---
+gsap.registerPlugin(CustomEase, Flip);
+
+CustomEase.create("osmo-ease", "0.625, 0.05, 0, 1");
+
+gsap.defaults({
+  ease: "osmo-ease",
+  duration: 0.725
+});
+
+function initGalleryOverlayTransitionFlip() {
+  const listItems = document.querySelectorAll(".main-title__item");
+  const imageItems = document.querySelectorAll(".main-img__item");
+  const overlayItems = document.querySelectorAll(".overlay-item");
+  const overlayNav = document.querySelector(".overlay-nav");
+  const navItems = document.querySelectorAll("[data-overlay='nav-item']");
+  const closeButton = document.querySelector("[data-overlay='close']");
+  const headings = document.querySelectorAll(".main-title")
+  let activeListItem = null;
+
+  function openOverlay(index) {
+    // Set active class to the clicked list item
+    listItems.forEach(item => item.classList.remove("active"));
+    activeListItem = listItems[index];
+    activeListItem.classList.add("active");
+
+    // Record the state of the title
+    const title = activeListItem.querySelector(".main-title");
+    const titleState = Flip.getState(title, {
+      props: "fontSize"
+    });
+
+    // Record the state of the image
+    const image = imageItems[index].querySelector(".image");
+    const imageState = Flip.getState(image);
+
+    // Show the overlay and get elements for animation
+    const overlayItem = overlayItems[index];
+    const content = overlayItem.querySelector(".overlay-row")
+    gsap.set(overlayItem, {
+      display: "block",
+      autoAlpha: 110
+    })
+    gsap.fromTo(content, {
+      autoAlpha: 0
+    }, {
+      autoAlpha: 1,
+      delay: 0.5
+    })
+    const textTarget = overlayItem.querySelector("[data-overlay='text-target']");
+    const imgTarget = overlayItem.querySelector("[data-overlay='img-target']");
+
+    // Append the elements to overlay targets
+    textTarget.appendChild(title);
+    imgTarget.appendChild(image);
+
+    // Animate with GSAP Flip
+    Flip.from(titleState);
+    Flip.from(imageState);
+
+    gsap.set(overlayNav, {
+      display: "flex"
+    })
+    gsap.fromTo(navItems, {
+      yPercent: 110,
+    }, {
+      yPercent: 0,
+      stagger: 0.1,
+    });
+
+    gsap.set(imageItems, {
+      autoAlpha: 0
+    })
+    listItems.forEach((listItem, i) => {
+      if (i !== index) {
+        const otherTitle = listItem.querySelector(".main-title");
+        gsap.to(otherTitle, {
+          yPercent: 100,
+          autoAlpha: 0,
+          duration: 0.45,
+          delay: 0.2 - i * 0.05
+        });
+      }
+    });
+  }
+
+  // Function to close overlay
+  function closeOverlay() {
+    if (!activeListItem) return;
+
+    // Find active overlay
+    const index = Array.from(listItems).indexOf(activeListItem);
+    const overlayItem = overlayItems[index];
+    const title = overlayItem.querySelector("[data-overlay='text-target'] .main-title");
+    const image = overlayItem.querySelector("[data-overlay='img-target'] .image");
+    const overlayContent = overlayItem.querySelector(".overlay-row");
+
+    // Record the state of title and image in overlay
+    const titleState = Flip.getState(title, {
+      props: "fontSize"
+    });
+    const imageState = Flip.getState(image);
+
+    // Reset overlay display and move elements back to their original containers
+    gsap.to(navItems, {
+      yPercent: 110,
+      onComplete: () => {
+        overlayNav.style.display = "none";
+      }
+    });
+    gsap.to(overlayContent, {
+      autoAlpha: 0,
+      onComplete: () => {
+        overlayItem.style.display = "none";
+      }
+    });
+
+    activeListItem.querySelector(".button").appendChild(title);
+    imageItems[index].appendChild(image);
+    gsap.set(imageItems[index], {
+      autoAlpha: 1
+    })
+
+    // Animate elements back with GSAP Flip
+    Flip.from(titleState);
+    Flip.from(imageState);
+
+    // Remove active class
+    activeListItem.classList.remove("active");
+    activeListItem = null;
+
+    gsap.to(headings, {
+      yPercent: 0,
+      autoAlpha: 1,
+      delay: 0.3,
+      stagger: 0.05
+    });
+  }
+
+  // Add click event listeners to list items
+  listItems.forEach((listItem, index) => {
+    listItem.addEventListener("click", () => openOverlay(index));
+  });
+
+  // Close overlay on ESC key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeOverlay();
+  });
+
+  // Close overlay on close button click
+  closeButton.addEventListener("click", closeOverlay);
+
+  // Show corresponding image on hover of a list item, based on index
+  listItems.forEach((listItem, i) => {
+    listItem.addEventListener("mouseenter", () => {
+      gsap.set(imageItems, {
+        autoAlpha: 0
+      }) // hide all
+      gsap.set(imageItems[i], {
+        autoAlpha: 1
+      }) // show image with matching index
+    });
+  });
+}
+
+// Initialize Gallery to Overlay Transition with GSAP Flip
+document.addEventListener('DOMContentLoaded', () => {
+  initGalleryOverlayTransitionFlip();
+});
