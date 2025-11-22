@@ -5,6 +5,7 @@ import { BigWord } from "./components/bigWord/BigWord";
 import LogoRevealLoader from "./components/LogoRevealLoader/LogoRevealLoader";
 import { useEffect, useState } from "react";
 import { images } from "./components/masonry/images";
+import MaskedLines from "./components/MaskedLines/MaskedLines";
 
 function App() {
   // Always show loader on every reload
@@ -34,7 +35,6 @@ function App() {
         </section>
 
         <section className="container">
-          <BigWord text="TULIO" />
           <BigWord text="SALVATIERRA" />
         </section>
 
@@ -53,8 +53,34 @@ function App() {
             ))}
           </MasonryGrid>
         </section>
+        <section className="container">
+        <div className="card">
+          <MaskedLines as="h3" scroll scrollStart="top 60%">
+            Card Title{" "}
+          </MaskedLines>
 
-        <InteractiveDotGrid />
+          <MaskedLines as="p" scroll scrollStart="top 60%">
+            Card Description
+          </MaskedLines>
+        </div>
+        
+          <MaskedLines as="p" scroll scrollStart="top 60%">
+            The text in this paragraph is split by words and lines. We have enabled masking on the lines so that we can animate the lines to create a fun 'reveal' animation. Nice and easy!
+          </MaskedLines>
+        
+
+        <MaskedLines as="h1">CICERO WEB STUDIO</MaskedLines>
+        <MaskedLines
+          as="h2"
+          scroll
+          scrollStart="top 60%"
+        >This is another line that reveals on scroll. The effect is not quite there yet.</MaskedLines>
+        <MaskedLines as="p" scroll scrollStart="top 60%">
+          All items at Ecclection are affordable, curated from local artists,
+          and chosen with care to support the community.
+        </MaskedLines>
+        
+      </section>
       </main>
     </>
   );
