@@ -1,5 +1,6 @@
 import { MasonryGrid } from "./components/masonry/masonry";
 import "./App.css";
+import StickyTabs from "./components/stickyTabs/stickyTabs";
 import InteractiveDotGrid from "./components/interativeDotGrid/InteractiveDotGrid";
 import { BigWord } from "./components/bigWord/BigWord";
 import LogoRevealLoader from "./components/LogoRevealLoader/LogoRevealLoader";
@@ -53,6 +54,9 @@ function App() {
             ))}
           </MasonryGrid>
         </section>
+        <section className="container">
+        <StickyTabs />
+      </section>  
         <section className="container">
         <div className="card">
           <MaskedLines as="h3" scroll scrollStart="top 60%">
