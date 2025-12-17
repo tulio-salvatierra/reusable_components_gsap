@@ -7,6 +7,8 @@ import LogoRevealLoader from "./components/LogoRevealLoader/LogoRevealLoader";
 import { useEffect, useState } from "react";
 import { images } from "./components/masonry/images";
 import MaskedLines from "./components/MaskedLines/MaskedLines";
+import "./components/customCursor/customCursor.css";
+import Infinite3DScroll from "./components/Infinite3DScroll/Infinite3DScroll";
 
 function App() {
   // Always show loader on every reload
@@ -37,6 +39,9 @@ function App() {
 
         <section className="container">
           <BigWord text="SALVATIERRA" />
+        </section>
+        <section className="container">
+          <Infinite3DScroll />
         </section>
 
         <section className="container">
