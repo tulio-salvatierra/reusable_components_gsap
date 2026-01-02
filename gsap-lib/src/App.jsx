@@ -1,97 +1,46 @@
-import { MasonryGrid } from "./components/masonry/masonry";
+import { useState } from "react";
 import "./App.css";
-import StickyTabs from "./components/stickyTabs/stickyTabs";
-import InteractiveDotGrid from "./components/interativeDotGrid/InteractiveDotGrid";
-import { BigWord } from "./components/bigWord/BigWord";
-import LogoRevealLoader from "./components/LogoRevealLoader/LogoRevealLoader";
-import { useEffect, useState } from "react";
-import { images } from "./components/masonry/images";
-import MaskedLines from "./components/MaskedLines/MaskedLines";
-import "./components/customCursor/customCursor.css";
-import Infinite3DScroll from "./components/Infinite3DScroll/Infinite3DScroll";
+import Stage from "./components/Stage/Stage";
+import { animationRecipes } from "./animations/animations";
+import { buildTimeline } from "./engine/buildTimeline";
+import ScalingNav from "./components/Scaling-Burger/Scaling-Nav";
 
 function App() {
-  // Always show loader on every reload
-  const [loading, setLoading] = useState(true);
+  const [recipeId, setRecipeId] = useState(animationRecipes[0].id);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000); // Adjust time if needed
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="loader-fullscreen">
-        <LogoRevealLoader />
-      </div>
-    );
-  }
+  const recipe = animationRecipes.find((r) => r.id === recipeId);
 
   return (
-    <>
-      <main>
-        <section className="container">
-          <h1 className="heading">CICERO WEB STUDIO</h1>
-        </section>
+    <main>
+      <header>
+        <ScalingNav />
+      </header>
+      <div className="floating-menu">
+        <select
+          value={recipeId}
+          onChange={(e) => setRecipeId(e.target.value)}
+          className="border p-1"
+        >
+          {animationRecipes.map((r) => (
+            <option key={r.id} value={r.id}>
+              {r.name}
+            </option>
+          ))}
+        </select>
 
-        <section className="container">
-          <BigWord text="SALVATIERRA" />
-        </section>
-        <section className="container">
-          <Infinite3DScroll />
-        </section>
+        <button
+          onClick={() => {
+            console.log("PLAY", recipe);
+            buildTimeline(recipe, document.querySelector(".stage") || document);
+          }}
+          className="ml-2 px-3 py-1 bg-black text-white rounded"
+        >
+          Play
+        </button>
+      </div>
 
-        <section className="container">
-          <MasonryGrid shuffle={true}>
-            {images.map((src, i) => (
-              <div className="masonry-item" key={i}>
-                <div className="masonry-item__visual">
-                  <img
-                    src={src.src}
-                    alt={`Masonry ${i + 1}`}
-                    className={`masonry-item__visual-img ${src.variant}`}
-                  />
-                </div>
-              </div>
-            ))}
-          </MasonryGrid>
-        </section>
-        <section className="container">
-        <StickyTabs />
-      </section>  
-        <section className="container">
-        <div className="card">
-          <MaskedLines as="h3" scroll scrollStart="top 60%">
-            Card Title{" "}
-          </MaskedLines>
-
-          <MaskedLines as="p" scroll scrollStart="top 60%">
-            Card Description
-          </MaskedLines>
-        </div>
-        
-          <MaskedLines as="p" scroll scrollStart="top 60%">
-            The text in this paragraph is split by words and lines. We have enabled masking on the lines so that we can animate the lines to create a fun 'reveal' animation. Nice and easy!
-          </MaskedLines>
-        
-
-        <MaskedLines as="h1">CICERO WEB STUDIO</MaskedLines>
-        <MaskedLines
-          as="h2"
-          scroll
-          scrollStart="top 60%"
-        >This is another line that reveals on scroll. The effect is not quite there yet.</MaskedLines>
-        <MaskedLines as="p" scroll scrollStart="top 60%">
-          All items at Ecclection are affordable, curated from local artists,
-          and chosen with care to support the community.
-        </MaskedLines>
-        
-      </section>
-      </main>
-    </>
+      <Stage />
+    </main>
   );
 }
 
